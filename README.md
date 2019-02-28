@@ -1,6 +1,6 @@
 # FirebaseCrud
 Ionic with firebase db (CRUD)
 
-ionic build android 
-ionic build ios
+ionic build android /n
+ionic build ios /n
 ionic serve
