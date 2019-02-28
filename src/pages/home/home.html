@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Ionic Blank
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-item>
+    <ion-label >Name</ion-label>
+    <ion-input type="text" [(ngModel)]="inputText" placeholder="Item Name"></ion-input>
+  </ion-item>
+  <button ion-button block (click)="addItem({name:inputText})">Add</button>
+  <ion-list>
+    <ion-item *ngFor="let item of items" (click)="editItem(item.key)">
+      {{ item.name }}
+      <button ion-button style="float:right" (click)="delItem(item.key)">Del</button>
+    </ion-item>
+  </ion-list>
+</ion-content>
